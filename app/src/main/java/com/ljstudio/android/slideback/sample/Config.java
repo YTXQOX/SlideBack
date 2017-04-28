@@ -4,9 +4,7 @@ import android.app.Activity;
 
 import java.util.LinkedList;
 
-/**
- * @author WangZhengkui on 2016-02-22 11:00
- */
+
 public class Config {
     public static LinkedList<Activity> activitiesTasks = new LinkedList<>();
     public static void addActivity(Activity activity) {
