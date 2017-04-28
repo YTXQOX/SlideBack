@@ -19,7 +19,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Config.addActivity(this);
+        ActivityTaskConfig.addActivity(this);
         if (isSlideClose) {
             initSlideClose();
         }
@@ -27,7 +27,7 @@ public class BaseActivity extends AppCompatActivity {
 
     public void initSlideClose() {
         final View childAt0;
-        Activity beforeActivity = Config.getBeforeLastActivity();
+        Activity beforeActivity = ActivityTaskConfig.getBeforeLastActivity();
         if (beforeActivity != null) {
             ViewGroup decorView = (ViewGroup) beforeActivity.getWindow().getDecorView();
             childAt0 = decorView.getChildAt(0);
@@ -98,7 +98,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        Config.removeActivity(this);
+        ActivityTaskConfig.removeActivity(this);
         super.onDestroy();
     }
 }
