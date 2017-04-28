@@ -1,7 +1,7 @@
 # SlideDemo
 
 
-##滑动关闭lib
+## 滑动关闭lib
 
 
 
